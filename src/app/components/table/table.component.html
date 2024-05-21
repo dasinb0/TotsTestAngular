@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Listado de clientes</h1>
+  <div class="action-wrapper">
+    <button class="add-button" data-tooltip="Agregar Cliente" (click)="openForm()">+</button>
+  </div>
+  <tots-table
+    #tableComp
+    [config]="config"
+    (onAction)="onTableAction($event)"
+    [pageIndex]="1"
+    [pageSize]="5"
+  ></tots-table>
+</div>
